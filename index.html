@@ -1092,8 +1092,8 @@ async function handleBooking(){
   const date    = document.getElementById('bookDate').value
   const time    = document.getElementById('bookTime').value
   const notes   = document.getElementById('lisatiedot').value.trim()
-  const svc     = document.querySelector('input[name="valitse_palvelu"]:checked').value
-  const custype = document.querySelector('input[name="cusomer_type"]:checked').value
+  const svc     = document.querySelector('input[name="service"]:checked').value
+  const custype = document.querySelector('input[name="custype"]:checked').value
 
   if(!fname){alert('Syötä etunimi.');return}
   if(!email){alert('Syötä sähköpostiosoite.');return}
