@@ -1089,18 +1089,18 @@ async function handleBooking(){
   const address = document.getElementById('address').value.trim()
   const city    = document.getElementById('city').value
   const size    = document.getElementById('size').value
-  const date    = document.getElementById('bookDate').value
-  const time    = document.getElementById('bookTime').value
+  const date    = document.getElementById('date').value
+  const time    = document.getElementById('time').value
   const notes   = document.getElementById('lisatiedot').value.trim()
-  const svc     = document.querySelector('input[name="service"]:checked').value
-  const custype = document.querySelector('input[name="custype"]:checked').value
+  const svc     = document.querySelector('input[name="valitse_palvelu"]:checked').value
+  const custype = document.querySelector('input[name="cusomer_type"]:checked').value
 
   if(!fname){alert('Syötä etunimi.');return}
   if(!email){alert('Syötä sähköpostiosoite.');return}
   if(!phone){alert('Syötä puhelinnumero.');return}
   if(!date){alert('Valitse toivottu päivämäärä.');return}
 
-  const svcLabels  = {pika:'Pikapartio (59€/h)', aikataulu:'Aikataulutettu (45€/h)', paketti:'Kuukausipaketti (349€/kk)'}
+  const svcLabels  = {pika:'Pikapartio 59€', aikataulu:'Aikataulutettu 45€', paketti:'Kuukausipaketti'}
   const sizeLabels = {'2':'alle 35m²','2.5':'35–60m²','3.5':'60–90m²','4.5':'90m²+'}
 
   const btn = document.querySelector('.submit-btn')
@@ -1125,7 +1125,7 @@ async function handleBooking(){
             {name:'kohteen_koko',        value: sizeLabels[size] || size},
             {name:'palvelu',             value: svcLabels[svc] || svc},
             {name:'asiakastyyppi',       value: custype},
-            {name:'toivottu_paivamaara', value: date},
+            {name:'paivamaara',          value: date},
             {name:'toivottu_kellonaika', value: time},
             {name:'lisatiedot',          value: notes}
           ],
