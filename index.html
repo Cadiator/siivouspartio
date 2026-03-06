@@ -914,9 +914,9 @@ footer{background:var(--navy);padding:56px 5% 36px;color:rgba(255,255,255,.45)}
           <label>Kaupunki</label>
           <select id="city">
             <option value="">Valitse alue</option>
-            <option value="espoo">📍 Espoo</option>
-            <option value="helsinki">📍 Helsinki</option>
-            <option value="vantaa">📍 Vantaa</option>
+            <option value="espoo">Espoo</option>
+            <option value="helsinki">Helsinki</option>
+            <option value="vantaa">Vantaa</option>
           </select>
         </div>
       </div>
@@ -1121,9 +1121,9 @@ async function handleBooking(){
             {name:'phone',               value: phone},
             {name:'email',               value: email},
             {name:'katuosoite',          value: address},
-            {name:'kaupunki',            value: city},
+            {name:'city',                value: city},
             {name:'kohteen_koko',        value: sizeLabels[size] || size},
-            {name:'valitse_palvelu',             value: svc},
+            {name:'valitse_palvelu',     value: svc},
             {name:'asiakastyyppi',       value: custype},
             {name:'paivamaara',          value: date},
             {name:'toivottu_kellonaika', value: time},
