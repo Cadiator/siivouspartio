@@ -96,18 +96,11 @@ nav ul a:hover{color:#fff}
 .hpc-city{background:rgba(244,97,30,.15);border:1px solid rgba(244,97,30,.3);border-radius:100px;padding:5px 12px;font-size:.75rem;color:rgba(255,255,255,.85);font-weight:600;letter-spacing:.02em}
 
 /* ── TRUST BAR ── */
-/* ── LOGO MARQUEE BAR ── */
-.trust-bar{background:var(--navy2);padding:0;border-bottom:1px solid rgba(255,255,255,.06);overflow:hidden;position:relative}
-.trust-bar::before,.trust-bar::after{content:'';position:absolute;top:0;bottom:0;width:140px;z-index:2;pointer-events:none}
-.trust-bar::before{left:0;background:linear-gradient(to right,var(--navy2) 40%,transparent)}
-.trust-bar::after{right:0;background:linear-gradient(to left,var(--navy2) 40%,transparent)}
-.marquee-track{display:flex;align-items:center;overflow:hidden}
-.marquee-inner{display:flex;align-items:center;animation:marquee-scroll 30s linear infinite;will-change:transform}
-.marquee-inner:hover{animation-play-state:paused}
-@keyframes marquee-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.logo-item{display:flex;align-items:center;justify-content:center;padding:22px 52px;opacity:.38;transition:opacity .3s;filter:brightness(0) invert(1);flex-shrink:0}
-.logo-item:hover{opacity:.8}
-.logo-item img{height:26px;width:auto;object-fit:contain;display:block}
+.trust-bar{background:var(--navy2);padding:16px 5%;display:flex;align-items:center;justify-content:center;gap:48px;border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.65);font-size:.84rem;font-weight:500}
+.trust-item .ti-icon{font-size:1.15rem;opacity:.9}
+.trust-sep{width:1px;height:22px;background:rgba(255,255,255,.1);flex-shrink:0}
+@media(max-width:768px){.trust-sep{display:none}.trust-bar{gap:14px 28px}}
 
 /* ── SECTION COMMONS ── */
 section{padding:96px 5%}
